@@ -270,6 +270,13 @@ onMounted(loadData);
             </div>
 
             <div class="flex flex-wrap items-center gap-2 shrink-0">
+              <RouterLink
+                :to="`/listings/${listing.id}/edit`"
+                class="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 transition"
+              >
+                Editează
+              </RouterLink>
+
               <button
                 type="button"
                 :disabled="busyId === listing.id"
