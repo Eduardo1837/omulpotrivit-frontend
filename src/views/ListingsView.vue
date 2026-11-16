@@ -82,7 +82,9 @@ onMounted(async () => {
               </div>
 
               <h3 class="text-lg font-bold text-gray-900 line-clamp-1 hover:text-indigo-600 transition">
-                {{ item.titlu }}
+                <RouterLink :to="`/listings/${item.id}`">
+                  {{ item.titlu }}
+                </RouterLink>
               </h3>
 
               <p class="text-sm text-gray-600 mt-2 line-clamp-3 leading-relaxed">
@@ -108,9 +110,12 @@ onMounted(async () => {
                 <span class="text-xs text-gray-400 block font-medium">Preț estimat</span>
                 <span class="text-lg font-black text-indigo-600">{{ item.pret_afisat }}</span>
               </div>
-              <span class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white border border-gray-200 text-gray-700 hover:bg-gray-100 shadow-sm transition cursor-pointer">
+              <RouterLink
+                :to="`/listings/${item.id}`"
+                class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white border border-gray-200 text-gray-700 hover:bg-gray-100 shadow-sm transition"
+              >
                 Detalii &rarr;
-              </span>
+              </RouterLink>
             </div>
           </div>
         </template>

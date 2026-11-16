@@ -249,7 +249,11 @@ onMounted(loadData);
                 </span>
               </div>
 
-              <h3 class="text-xl font-bold text-gray-900">{{ listing.titlu }}</h3>
+              <h3 class="text-xl font-bold text-gray-900">
+                <RouterLink :to="`/listings/${listing.id}`" class="hover:text-indigo-600 transition">
+                  {{ listing.titlu }}
+                </RouterLink>
+              </h3>
 
               <div class="mt-1 flex flex-wrap items-center gap-3 text-xs text-gray-500">
                 <span>Oraș: <strong>{{ listing.oras }}</strong></span>

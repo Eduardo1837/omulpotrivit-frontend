@@ -123,9 +123,12 @@ onMounted(async () => {
               <p class="text-gray-600 text-sm mb-4 flex-1">
                 {{ truncate(listing.descriere, 80) }}
               </p>
-              <span class="text-blue-600 hover:text-blue-800 text-sm font-semibold uppercase tracking-wider cursor-pointer">
+              <RouterLink
+                :to="`/listings/${listing.id}`"
+                class="text-blue-600 hover:text-blue-800 text-sm font-semibold uppercase tracking-wider"
+              >
                 View Details
-              </span>
+              </RouterLink>
             </div>
           </div>
         </template>
