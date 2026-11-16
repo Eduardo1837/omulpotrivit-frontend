@@ -141,6 +141,13 @@ onMounted(loadData);
           Gestionează-ți serviciile publicate și consultă performanța acestora.
         </p>
       </div>
+
+      <RouterLink
+        to="/listings/create"
+        class="inline-flex items-center gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2 rounded-lg text-sm shadow-sm transition self-start sm:self-auto"
+      >
+        + Publică Anunț Nou
+      </RouterLink>
     </div>
   </div>
 

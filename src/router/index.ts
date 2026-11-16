@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { authService } from '@/services/api';
 import HomeView from '@/views/HomeView.vue';
 import ListingsView from '@/views/ListingsView.vue';
+import CreateListingView from '@/views/CreateListingView.vue';
 import ListingDetailsView from '@/views/ListingDetailsView.vue';
 import MyListingsView from '@/views/MyListingsView.vue';
 import LoginView from '@/views/LoginView.vue';
@@ -12,6 +13,7 @@ const router = createRouter({
   routes: [
     { path: '/', name: 'home', component: HomeView },
     { path: '/listings', name: 'listings', component: ListingsView },
+    { path: '/listings/create', name: 'create-listing', component: CreateListingView, meta: { requiresAuth: true } },
     { path: '/listings/:id', name: 'listing-details', component: ListingDetailsView },
     { path: '/my-listings', name: 'my-listings', component: MyListingsView, meta: { requiresAuth: true } },
     { path: '/login', name: 'login', component: LoginView, meta: { guestOnly: true } },

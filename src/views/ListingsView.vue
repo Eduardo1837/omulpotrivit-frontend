@@ -46,7 +46,14 @@ onMounted(async () => {
       </div>
 
       <RouterLink
-        v-if="!isAuthenticated"
+        v-if="isAuthenticated"
+        to="/listings/create"
+        class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2 rounded-lg text-sm shadow-sm transition self-start sm:self-auto"
+      >
+        + Publică Anunț
+      </RouterLink>
+      <RouterLink
+        v-else
         to="/login"
         class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-4 py-2 rounded-lg text-sm shadow-sm transition self-start sm:self-auto"
       >

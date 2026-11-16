@@ -57,6 +57,14 @@ async function handleLogout() {
               >
                 Anunțurile mele
               </RouterLink>
+              <RouterLink
+                v-if="isAuthenticated"
+                to="/listings/create"
+                class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition"
+                active-class="border-emerald-600 text-emerald-700"
+              >
+                + Publică Anunț
+              </RouterLink>
             </div>
           </div>
 
