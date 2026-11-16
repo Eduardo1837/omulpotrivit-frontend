@@ -49,12 +49,12 @@ onMounted(async () => {
     <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
       Browse through hundreds of listings, read reviews, and connect directly with providers.
     </p>
-    <a
-      href="#fresh-listings"
+    <RouterLink
+      to="/listings"
       class="inline-block bg-white text-blue-600 font-bold text-lg px-8 py-3 rounded-full shadow-lg hover:bg-gray-100 transition"
     >
       Start Exploring
-    </a>
+    </RouterLink>
   </div>
 
   <!-- Categories Section -->
@@ -86,9 +86,9 @@ onMounted(async () => {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center mb-6">
         <h2 class="text-2xl font-bold text-gray-800">Fresh Listings</h2>
-        <a href="#fresh-listings" class="text-blue-600 hover:text-blue-800 font-medium">
+        <RouterLink to="/listings" class="text-blue-600 hover:text-blue-800 font-medium">
           View all &rarr;
-        </a>
+        </RouterLink>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">

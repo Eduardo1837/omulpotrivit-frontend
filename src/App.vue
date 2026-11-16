@@ -37,11 +37,17 @@ async function handleLogout() {
             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex items-center">
               <RouterLink
                 to="/"
-                class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium transition"
-                active-class="border-blue-600 text-gray-900"
+                class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 transition"
                 exact-active-class="border-blue-600 text-gray-900"
               >
                 Acasă
+              </RouterLink>
+              <RouterLink
+                to="/listings"
+                class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-gray-500 hover:text-gray-700 transition"
+                active-class="border-blue-600 text-gray-900"
+              >
+                Anunțuri
               </RouterLink>
             </div>
           </div>
